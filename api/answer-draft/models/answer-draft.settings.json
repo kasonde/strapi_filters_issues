@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answer_drafts",
+  "info": {
+    "name": "AnswerDraft",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lifecycleStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "waitingForValidation",
+        "published"
+      ]
+    },
+    "answer": {
+      "via": "answerDraft",
+      "model": "answer"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topics",
+  "info": {
+    "name": "Topic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "genericAnswer": {
+      "model": "answer",
+      "via": "topic"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Running",
+        "Walking",
+        "Eating",
+        "Sleeping"
+      ]
+    }
+  }
+}
